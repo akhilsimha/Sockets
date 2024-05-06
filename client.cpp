@@ -11,7 +11,7 @@ int main() {
   WSAStartup(MAKEWORD(2, 2), &wsaData);
 
   // Create socket
-  int clientSocket = WSASocketA(AF_INET, SOCK_STREAM, IPPROTO_TCP, NULL, 0, WSA_FLAG_OVERLAPPED);
+  int clientSocket = WSASocketA(AF_INET, SOCK_DGRAM, IPPROTO_UDP, NULL, 0, WSA_FLAG_OVERLAPPED);
 
   // Specify server address
   SOCKADDR_IN serverAddress;
